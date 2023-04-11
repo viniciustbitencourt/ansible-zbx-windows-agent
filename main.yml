@@ -1,0 +1,14 @@
+---
+- name: Install Zabbix Agent2 on Windows
+  hosts: all
+  gather_facts: true
+  vars:
+    - zbx_proxy: 10.100.10.24
+  vars_files:
+    - vars/main.yml
+  tasks:
+    - name: Install
+      #include: "tasks/main.yml"
+      include: "tasks/remove_agent.yml"
+    #- debug: var=vars
+    #- debug: var=hostvars[inventory_hostname]
