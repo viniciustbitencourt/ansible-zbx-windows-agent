@@ -1,0 +1,6 @@
+---
+- hosts: windows
+  tasks:
+    - name: Ping Windows VM
+      ping:
+      register: ping_result

@@ -1,10 +1,11 @@
 [windows]
-SPO-YORK1.cdd.corp
-#SPO-YORK2.cdd.corp
+192.168.0.7
+#vm123
 
 [windows:vars]
-ansible_user= supcddit@CDD.CORP
-ansible_password= C0mdek51@102030#
+ansible_user= user_teste
+ansible_password= teste123
 ansible_connection= winrm
-ansible_port= 5985
-ansible_winrm_transport= kerberos
+#ansible_port= 5985
+ansible_winrm_server_cert_validation=ignore
+#ansible_winrm_transport= kerberos
